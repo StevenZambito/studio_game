@@ -26,17 +26,21 @@ class Player
 end
 
 player1 = Player.new("steven", 100)
-puts player1
-puts player1.health
-puts player1.player_name
+player2 = Player.new("dylan", 100)
+player3 = Player.new("newbie", 100)
 
-player1 = Player.new("dylan", 100)
-player1.blam
-puts player1
+players = [player1, player2, player3]
 
-player1 = Player.new("newbie", 100)
-puts player1
-player1.player_name = "lawrence"
-puts player1.player_name
+puts "There are #{players.count} players in the game"
 
+players.each do |player|
+  puts player
+  player.w00t
+  puts player
+end
+
+players.pop
+player4 = Player.new("Shemp", 90)
+players.push(player4)
+puts players
 
