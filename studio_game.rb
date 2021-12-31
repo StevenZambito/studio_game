@@ -39,6 +39,14 @@ players.each do |player|
   puts player
 end
 
+class Game
+  attr_reader :title
+  
+  def initialize(title)
+    @title = title
+  end
+end
+
 players.pop
 player4 = Player.new("Shemp", 90)
 players.push(player4)
