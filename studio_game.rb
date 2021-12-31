@@ -1,5 +1,6 @@
 class Player
   attr_accessor :health, :player_name
+
   def initialize(player_name, health=100)
     @player_name = player_name.capitalize
     @health = health
@@ -25,30 +26,43 @@ class Player
 
 end
 
-player1 = Player.new("steven", 100)
-player2 = Player.new("dylan", 100)
-player3 = Player.new("newbie", 100)
-
-players = [player1, player2, player3]
-
-puts "There are #{players.count} players in the game"
-
-players.each do |player|
-  puts player
-  player.w00t
-  puts player
-end
 
 class Game
   attr_reader :title
   
   def initialize(title)
     @title = title
+    @players = []
   end
+
+  def add_player(player)
+    @players << player
+  end
+
+  def play
+    puts "There are #{@players.count} players in #{@title}"
+    @players.each do |player|
+      puts player
+    end
+
+    @players.each do |player|
+      player.blam
+      player.w00t
+      player.w00t
+      puts player
+    end
+  end
+
 end
 
-players.pop
-player4 = Player.new("Shemp", 90)
-players.push(player4)
-puts players
+
+player1 = Player.new("steven", 100)
+player2 = Player.new("dylan", 100)
+player3 = Player.new("newbie", 100)
+
+knuckleheads = Game.new("Knuckleheads")
+knuckleheads.add_player(player1)
+knuckleheads.add_player(player2)
+knuckleheads.add_player(player3)
+knuckleheads.play
 
