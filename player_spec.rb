@@ -25,4 +25,22 @@ describe Player do
     @player.blam
     expect(@player.health).to eq(@initial_health - 15)
   end
+
+  context "testing whether a player is strong or not with a health score of 150" do
+    before do
+      @player = Player.new("Ryan", 150)
+    end
+    it "shows that player is a strong one" do
+      expect(@player.strong?).to eq(true)
+    end
+  end
+
+  context "testing whether a player is strong or not with a health score of 100" do
+    before do
+      @player = Player.new("cyndy", 100)
+    end
+    it "shows that player is not a strong one" do
+      expect(@player.strong?).to eq(false)
+    end
+  end
 end
