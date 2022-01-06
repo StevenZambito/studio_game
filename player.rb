@@ -31,4 +31,8 @@ class Player
       false
     end
   end
+  
+  def <=>(other)
+    other.score <=> score
+  end
 end
