@@ -4,6 +4,7 @@ class Player
   def initialize(player_name, health=100)
     @player_name = player_name.capitalize
     @health = health
+    @found_treasures = Hash.new(0)
   end
 
   def to_s
