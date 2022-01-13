@@ -22,7 +22,7 @@ class Player
   end
 
   def score
-    @health + @player_name.length
+    @health + points
   end
 
   def strong?
