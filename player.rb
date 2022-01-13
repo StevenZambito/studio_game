@@ -36,4 +36,8 @@ class Player
   def <=>(other)
     other.score <=> score
   end
+
+  def found_treasure(treasure)
+
+  end
 end
