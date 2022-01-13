@@ -44,5 +44,6 @@ class Player
   end
 
   def points
+    @found_treasures.values.reduce(0, :+)
   end
 end
