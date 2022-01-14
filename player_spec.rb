@@ -16,7 +16,7 @@ describe Player do
     @player.found_treasure(Treasure.new(:hammer, 50))
     @player.found_treasure(Treasure.new(:hammer, 50))
   
-    expect(@player.to_s).to eq("Steven has a health of 150 and a score of 250")
+    expect(@player.to_s).to eq("Steven has a health of 150, 100 points, and a score of 250")
   end
   it "computes a score as the sum of its health and points" do
     @player.found_treasure(Treasure.new(:hammer, 50))
