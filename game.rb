@@ -42,6 +42,11 @@ class Game
     puts "Wimpy Players:"
     wimpy.each {|p| print_name_and_health(p) }
 
+    @players.each do |player|
+      puts "\n#{player.player_name}'s point totals:"
+      puts "#{player.points} grand total points"
+    end
+
     puts "Here are the stats!"
     @players.sort.each do |p|
       puts "#{p.player_name}.......... #{p.score}"
