@@ -11,3 +11,7 @@ knuckleheads.add_player(player3)
 knuckleheads.play(3)
 knuckleheads.print_stats
 
+loop do
+  puts "How many game rounds? ('quit' to exit)?"
+end
+
