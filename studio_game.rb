@@ -14,5 +14,13 @@ knuckleheads.print_stats
 loop do
   puts "How many game rounds? ('quit' to exit)?"
   answer = gets.chomp.downcase
+  if answer.match(/^\d+$/)
+    knuckleheads.play(answer.to_i)
+    knuckleheads.print_stats
+  elsif answer == 'quit' || answer == 'exit'
+    break
+  else
+    puts "Please enter a number or 'quit'"
+  end
 end
 
