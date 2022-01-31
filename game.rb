@@ -61,6 +61,12 @@ class Game
     end
   end
 
+  def save_high_scores(to_file="high_scores.txt")
+    File.open(to_file, "w") do |file|
+      file.puts "#{@title} High Scores:"
+    end
+  end
+
   def load_players(file_name)
     File.readlines(file_name).each do |line|
       name, health = line.split(',')
