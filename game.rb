@@ -61,7 +61,7 @@ class Game
     end
   end
 
-  def load_playersz(file_name)
+  def load_players(file_name)
     File.readlines(file_name).each do |line|
       name, health = line.split(',')
       player = Player.new(name, Integer(health))

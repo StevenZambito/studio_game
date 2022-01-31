@@ -5,9 +5,9 @@ player2 = Player.new("dylan", 100)
 player3 = Player.new("newbie", 100)
 
 knuckleheads = Game.new("Knuckleheads")
-load_players("players.csv")
-knuckleheads.play(3)
-knuckleheads.print_stats
+knuckleheads.load_players(ARG.shift || "players.csv")
+# knuckleheads.play(3)
+# knuckleheads.print_stats
 
 loop do
   puts "How many game rounds? ('quit' to exit)?"
